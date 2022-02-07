@@ -70,17 +70,17 @@ Example:
     </nav>
 
     // CSS
+    #nav li {
+        color: red;
+    }
+    Got a score of 0 1 0 1
+
     li.active {
         color: blue;
     }
 
     // Got a score of  0 0 1 1
-
-    #nav li {
-        color: red;
-    }
-
-    Got a score of 0 1 0 1
+    // The color is red
 
 ```
 
