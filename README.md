@@ -51,3 +51,74 @@ We can also scope the css variable inside the element that we want.
 
 It can be useful for larger design system, themes, different screen sizes,
 etc...
+
+### CSS Specificity
+
+There is the Cascade Specificity and also with attribute like **ID**, **class**,
+etc.. You can use this table to know calculate the specificity:
+
+| Style attribute | ID  | Class, Pseudo-class, attribute | Elements |
+| --------------- | --- | ------------------------------ | -------- |
+
+Example:
+
+```
+
+    // HTML
+    <nav id="nav">
+      <li class="active">ah</li>
+    </nav>
+
+    // CSS
+    li.active {
+        color: blue;
+    }
+
+    // Got a score of  0 0 1 1
+
+    #nav li {
+        color: red;
+    }
+
+    Got a score of 0 1 0 1
+
+```
+
+We are an exception which is:
+
+```
+    !important
+```
+
+That can override everything. Don't use it, it's not a good practice.
+
+### Colors and intentions
+
+It's easier to declare the colors then to define the colors intentions
+
+```
+    :root {
+    /* Define Colors as colors */
+    --green: #00ebc7;
+    --red: #ff5470;
+    --yellow: #fde24f;
+    --black: #1b2d45;
+    --darkBlue: #00214d;
+    --grey: #bfbfbf;
+    --lightGrey: #f2f4f6;
+
+    /* Define Colors intentions */
+    --background: var(--lightGrey);
+    --textColor: var(--black);
+    }
+
+    body {
+    background: var(--background);
+    color: var(--textColor);
+    }
+
+    .dark {
+    --background: var(--black);
+    --textColor: var(--lightGrey);
+    }
+```
