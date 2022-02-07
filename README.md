@@ -64,23 +64,23 @@ Example:
 
 ```
 
-    // HTML
+    <!-- HTML -->
     <nav id="nav">
       <li class="active">ah</li>
     </nav>
 
-    // CSS
+    /* CSS */
     #nav li {
         color: red;
     }
-    Got a score of 0 1 0 1
+    /* Got a score of 0 1 0 1 */
 
     li.active {
         color: blue;
     }
 
-    // Got a score of  0 0 1 1
-    // The color is red
+    /* Got a score of  0 0 1 1 */
+    /* The color is red */
 
 ```
 
@@ -121,4 +121,32 @@ It's easier to declare the colors then to define the colors intentions
     --background: var(--black);
     --textColor: var(--lightGrey);
     }
+```
+
+## Typography
+
+Useful links:
+
+- [typewolf](https://www.typewolf.com/)
+- [type-scale](https://www.type-scale.com)
+- [v-fonts](https://v-fonts.com/)
+- [fontpair](https://www.fontpair.co)
+- [Google fonts](https://fonts.google.com/)
+- [dafont](https://www.dafont.com/)
+- [pangram pangram](https://pangrampangram.com/)
+- [loremipsum](https://www.loremipsum.io)
+
+We can use Type Scale to define the scale of our typographies inside our design
+system
+
+```
+    /* Type */
+    --headingFont: 'Space Mono', monospace;
+    --bodyFont: 'Work Sans', sans-serif;
+    --h1: 3.052em; /* or --fs1 // --fsh1 */
+    --h2: 2.441em; /* or --fs2 // --fsh2 */
+    --h3: 1.953em; /* or --fs3 // --fsh3 */
+    --h4: 1.563em; /* or --fs4 // --fsh4 */
+    --h5: 1.25em; /* or --fs5 // --fsh5 */
+    --smallText: 0.8em;
 ```
